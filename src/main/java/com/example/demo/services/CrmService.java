@@ -5,9 +5,9 @@ import com.example.demo.repository.CrmCaseRepository;
 import com.example.demo.repository.ExternalSystemRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dtos.CrmCaseDto;
-import dtos.DataDto;
-import dtos.ExternalSystem;
+import com.example.demo.dtos.CrmCaseDto;
+import com.example.demo.dtos.DataDto;
+import com.example.demo.dtos.ExternalSystem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

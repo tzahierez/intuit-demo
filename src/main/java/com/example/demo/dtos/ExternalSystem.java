@@ -1,4 +1,4 @@
-package dtos;
+package com.example.demo.dtos;
 
 public class ExternalSystem {
 

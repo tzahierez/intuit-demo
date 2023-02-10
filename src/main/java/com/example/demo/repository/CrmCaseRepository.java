@@ -1,8 +1,7 @@
 package com.example.demo.repository;
 
-import dtos.CrmCaseDto;
+import com.example.demo.dtos.CrmCaseDto;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +15,7 @@ public class CrmCaseRepository {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    
+
     public List<Map<String, Object>> findAll() {
         return jdbcTemplate.queryForList("select * from crm_case");
     }
