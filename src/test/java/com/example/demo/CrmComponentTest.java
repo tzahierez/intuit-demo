@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @TestPropertySource(
         locations = "classpath:application-componentTests.properties")
 
-public class CrmTest {
+public class CrmComponentTest {
 
     // json taken from task definition
     private static final String JSON_EXAMPLE = "{ \"data\": [\n" +
@@ -79,7 +79,7 @@ public class CrmTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.*", hasSize(4)));
 
-        // testing status lookup only (no aggregation)
+        // 4 crm cases should be returned now. there are 2 external systems, and each one of them returns 2 cases
         mvc.perform(MockMvcRequestBuilders
                         .get("/crm/find_all_crm_cases", 1)
                         .accept(MediaType.APPLICATION_JSON))
