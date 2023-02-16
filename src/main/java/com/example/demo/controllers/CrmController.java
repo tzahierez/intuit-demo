@@ -16,7 +16,7 @@ public class CrmController {
 
     // TODO - should be post, with admin level authorization
     // admin API - enable adding external systems such as Banana and Strawberry
-    @GetMapping("/add_external_system/{url}")
+   @GetMapping("/add_external_system/{url}")
     public String addExternalSystem(@PathVariable String url) {
 
         return crmService.addExternalSystem(url);
@@ -25,6 +25,7 @@ public class CrmController {
 
     // TODO - should be with admin level authorization (?)
     // admin API - enable adding external systems such as Banana and Strawberry
+    // see http://localhost:8080/crm/list_external_systems
     @GetMapping("/list_external_systems")
     public List<Map<String, Object>> addExternalSystem() {
 
